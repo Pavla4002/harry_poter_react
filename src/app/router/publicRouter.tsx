@@ -6,6 +6,10 @@ const publicRouter = createBrowserRouter([
   {
     path:'/',
     element: <FilmsPage/>,
+  },
+  {
+    path:'/pages/film',
+    element:<FilmsPage/>,
   }
 ])
 

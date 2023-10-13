@@ -1,0 +1,17 @@
+@import "src/app/style/index";
+
+.header{
+  background-color: $main-color;
+  @include horizontal-position-el;
+}
+
+.box{
+  @include horizontal-position-el;
+  max-width: 150px;
+  height: 100%;
+}
+
+.image{
+  width: 100%;
+  object-fit: cover;
+}

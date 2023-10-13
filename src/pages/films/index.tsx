@@ -1,20 +1,15 @@
-import { selectFilms } from "src/features/films/selector";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { filmsAsync } from "src/features/films/asyncThunk";
-import { IFilms } from "src/features/films/types";
-import { useAppSelector } from "src/app/hooks";
+import { Layout } from "antd";
+import FilmsList from "src/shared/ui/ListFilms";
+import HeaderPanel from "src/shared/ui/Header";
+
 
 const FilmsPage = () => {
-  const dispatch = useDispatch();
-  const films = useAppSelector(selectFilms);
-  console.log(films);
-  useEffect(()=>{
-    dispatch(filmsAsync());
-  },[]);
   return (
     <div>
-      {films.map(film => <div key={film.id}>{film.title_rus}</div>)}
+        <Layout style={{backgroundColor:'white'}}>
+          <HeaderPanel></HeaderPanel>
+          <FilmsList/>
+        </Layout>
     </div>
   );
 };

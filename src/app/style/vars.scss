@@ -1,0 +1,16 @@
+//Colors bg and etc
+$main-color:#005B55;
+$color-border:#02D6DA;
+
+@mixin horizontal-position-el{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin horizontal-position-el{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
