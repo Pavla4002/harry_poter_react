@@ -1,11 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {filmsAsync} from "src/features/films/asyncThunk";
+import { filmAsync, filmsAsync } from "src/features/films/asyncThunk";
 
 
 export const filmsSlice = createSlice({
     name: "films",
     initialState: {
         items:[],
+        film:null,
     },
     reducers:{
 
@@ -15,7 +16,9 @@ export const filmsSlice = createSlice({
             .addCase(filmsAsync.fulfilled,(state,action)=>{
                 state.items = action.payload;
             })
-
+            .addCase(filmAsync.fulfilled,(state,action)=>{
+                state.film = action.payload;
+            })
     }
 });
 

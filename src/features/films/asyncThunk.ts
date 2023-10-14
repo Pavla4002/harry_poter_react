@@ -11,3 +11,10 @@ export const filmsAsync = createAsyncThunk(
     }
 );
 
+export const filmAsync = createAsyncThunk(
+    'films/getFilmInfo',
+    async(filmId:number)=>{
+      const data = await  filmsAPI.getFilmInfo<IFilms>(filmId);
+      return data;
+    }
+)

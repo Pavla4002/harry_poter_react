@@ -2,6 +2,7 @@
 
 .header{
   background-color: $main-color;
+  margin-bottom: 30px;
   @include horizontal-position-el;
 }
 

@@ -1,6 +1,12 @@
 //Colors bg and etc
-$main-color:#005B55;
+$main-color: #005B55;
 $color-border:#02D6DA;
+$shadow-color: rgba(0, 91, 85, 0.29);
+
+//text
+$h1:700 32px/40px Inter, sans-serif;$h2:700 20px/30px Inter, sans-serif;
+$p-regular: 400 14px/20px Inter, sans-serif;
+
 
 @mixin horizontal-position-el{
   display: flex;
@@ -8,9 +14,16 @@ $color-border:#02D6DA;
   align-items: center;
 }
 
-@mixin horizontal-position-el{
+@mixin vertical-position-el{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
+
+@mixin page-area{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+

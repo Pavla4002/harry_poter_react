@@ -1,0 +1,32 @@
+@import "src/app/style/index";
+
+.box{
+  width: 100%;
+}
+
+.content{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.part1{
+  @include vertical-position-el;
+}
+.part2{
+  @include vertical-position-el;
+  width: 50%;
+  height: 60vh;
+  justify-content: space-between;
+}
+
+.smallPart1{
+  @include vertical-position-el;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.titleFilm{
+
+}

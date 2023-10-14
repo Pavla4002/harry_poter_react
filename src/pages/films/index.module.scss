@@ -1,0 +1,6 @@
+@import 'src/app/style/index';
+
+.layout{
+  @include page-area;
+  margin: 0 auto;
+}
