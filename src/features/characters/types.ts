@@ -1,0 +1,15 @@
+export interface ICharacters{
+  gender: string,
+  fullname:string,
+  type:string,
+  dateOfBirth:string,
+  dateOfDeath:string,
+  purityOfBlood:string,
+  patronus:string,
+  faculty:string,
+  nicknames:string,
+  title:string,
+  description:string,
+  img:string,
+  id: number,
+}

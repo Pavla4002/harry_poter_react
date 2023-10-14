@@ -12,7 +12,7 @@ interface ResponseFilm{
 export const filmsAPI = {
     async getFilms(){
        const response =  await $api.get<ResponseFilms>('films');
-        return response.data;
+       return response.data;
     },
   async getFilmInfo(filmId : number){
     const response =  await $api.get<ResponseFilm>(`films/${filmId}`);

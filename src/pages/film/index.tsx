@@ -1,12 +1,18 @@
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import { filmAsync } from "src/features/films/asyncThunk";
-import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import { useAppDispatch, useAppSelector} from "src/app/hooks";
 import { selectFilm } from "src/features/films/selector";
 import styles from './index.module.scss';
+import MyButton from "src/shared/ui/Button";
+
 
 
 const FilmPage = () => {
+  const navigate = useNavigate();
+  const handleClick = ()=>{
+    navigate('/pages/characters');
+  }
   const {filmId} = useParams();
   const dispatch = useAppDispatch();
   const film = useAppSelector(selectFilm);
@@ -15,6 +21,11 @@ const FilmPage = () => {
   },[]);
   return (
     <div className={styles.box}>
+      <div className={styles.content}>
+        <h1>
+          {film?.title_rus}
+        </h1>
+      </div>
       <div className={styles.content}>
         <div className={styles.part1}>
           <div><img src={film?.coverImg} alt="" /></div>
@@ -32,7 +43,9 @@ const FilmPage = () => {
             <span>Описание:</span>
             <span>{film?.description}</span>
           </div>
-
+          <div>
+            <MyButton onClick={handleClick}>Персонажи</MyButton>
+          </div>
         </div>
       </div>
       </div>

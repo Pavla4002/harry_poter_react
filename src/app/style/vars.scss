@@ -27,3 +27,10 @@ $p-regular: 400 14px/20px Inter, sans-serif;
   justify-content: center;
 }
 
+@mixin list{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}

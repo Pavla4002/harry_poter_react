@@ -5,11 +5,10 @@ export interface IFilms{
     title_eng: string,
     director: string,
     release:string ,
-    description:string ,
+    description:string,
     genre:string ,
     duration: string,
     authorMusic: string,
     coverImg:string ,
     numberPartFilm: number
-
 }

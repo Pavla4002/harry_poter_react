@@ -7,7 +7,6 @@ import styles from './index.module.scss';
 const FilmsPage = () => {
   return (
         <Layout style={{backgroundColor:'white'}} className={styles.layout}>
-            <HeaderPanel></HeaderPanel>
             <FilmsList/>
         </Layout>
   );
