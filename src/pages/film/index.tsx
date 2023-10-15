@@ -11,7 +11,7 @@ import MyButton from "src/shared/ui/Button";
 const FilmPage = () => {
   const navigate = useNavigate();
   const handleClick = ()=>{
-    navigate('/pages/characters');
+    navigate('/harry_poter_react/pages/characters');
   }
   const {filmId} = useParams();
   const dispatch = useAppDispatch();
