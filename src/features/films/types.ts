@@ -12,3 +12,16 @@ export interface IFilms{
     coverImg:string ,
     numberPartFilm: number
 }
+
+
+export interface ResponseFilms{
+    data:IFilms[];
+}
+
+export interface ResponseFilm{
+    data:IFilms;
+}
+
+export interface QueryParamsForSearchFilms{
+    title?:string
+}

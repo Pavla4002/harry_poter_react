@@ -1,24 +1,31 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { characterAsync, charactersAsync } from "src/features/characters/asyncThunk";
+import { ICharacters } from "src/features/characters/types";
 
+
+interface CharactersStore{
+  characters: ICharacters[],
+  character: null | ICharacters,
+}
+
+const initialState: CharactersStore= {
+  characters:[],
+  character: null,
+}
 
 export const charactersSlice = createSlice({
   name: 'characters',
-  initialState:{
-    characters:[],
-    character: null,
-  },
+  initialState,
   reducers:{
 
   },
-  extraReducers:(builder)=>{
-    builder
-      .addCase(charactersAsync.fulfilled,(state,action)=>{
-        state.characters = action.payload
-      })
-      .addCase(characterAsync.fulfilled,(state,action)=>{
-        state.character = action.payload
-      })
+  extraReducers:{
+  [charactersAsync.fulfilled.type]:(state:CharactersStore,{payload}: PayloadAction<ICharacters[]>)=>{
+        state.characters = payload
+      },
+  [characterAsync.fulfilled.type]:(state:CharactersStore,{payload}:PayloadAction<ICharacters>)=>{
+        state.character = payload
+      }
 }
 })
 

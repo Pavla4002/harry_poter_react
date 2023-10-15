@@ -11,9 +11,9 @@ const FilmsList = () => {
   const dispatch = useDispatch();
   const films = useAppSelector(selectFilms);
   console.log(films);
-  useEffect(()=>{
-    dispatch(filmsAsync());
-  },[]);
+  // useEffect(()=>{
+  //   dispatch(filmsAsync({title: 'дары смерти'}));
+  // },[]);
 
     return (
        <div style={{width: '90%'}} className={styles.listCard}>

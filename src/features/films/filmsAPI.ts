@@ -1,17 +1,11 @@
 import {$api} from "src/shared/api/swapi";
-import { IFilms } from "src/features/films/types";
+import { QueryParamsForSearchFilms, ResponseFilm, ResponseFilms } from "src/features/films/types";
 
-interface ResponseFilms{
-    data:IFilms[];
-}
-
-interface ResponseFilm{
-  data:IFilms;
-}
 
 export const filmsAPI = {
-    async getFilms(){
-       const response =  await $api.get<ResponseFilms>('films');
+    async getFilms(queryParams : QueryParamsForSearchFilms){
+      const params = new URLSearchParams(queryParams as URLSearchParams);
+       const response =  await $api.get<ResponseFilms>('films',{params});
        return response.data;
     },
   async getFilmInfo(filmId : number){

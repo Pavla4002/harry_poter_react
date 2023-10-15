@@ -4,3 +4,19 @@
   @include page-area;
   margin: 0 auto;
 }
+.title{
+ @include title-page;
+}
+
+.boxSearchTitle{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.boxSearch{
+  @include vertical-position-el;
+}

@@ -5,7 +5,7 @@ import { ICharacters } from "src/features/characters/types";
 export const charactersAsync = createAsyncThunk(
   'characters/getCharacters',
   async ()=>{
-    const data = await charactersAPI.getCharacters<ICharacters[]>();
+    const data = await charactersAPI.getCharacters();
     return data;
 }
 )
@@ -13,7 +13,7 @@ export const charactersAsync = createAsyncThunk(
 export const characterAsync = createAsyncThunk(
   'characters/getCharacter',
   async (characterId : number)=>{
-      const data = await charactersAPI.getCharacter<ICharacters>(characterId);
+      const data = await charactersAPI.getCharacter(characterId);
       return data;
   }
 )

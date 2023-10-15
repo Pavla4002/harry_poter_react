@@ -7,7 +7,7 @@ import CharacterPage from "src/pages/character";
 
 const publicRouter= createBrowserRouter([
   {
-    path:'/',
+    path:'/harry_poter_react/',
     element: <MainPage/>,
     children:[
       {

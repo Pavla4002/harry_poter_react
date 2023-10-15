@@ -17,7 +17,7 @@ const FilmPage = () => {
   const dispatch = useAppDispatch();
   const film = useAppSelector(selectFilm);
   useEffect(()=>{
-    dispatch(filmAsync(filmId));
+    filmId && dispatch(filmAsync(+filmId));
   },[]);
   return (
     <div className={styles.box}>

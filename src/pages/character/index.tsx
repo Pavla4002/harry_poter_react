@@ -11,7 +11,7 @@ const CharacterPage = () => {
   const dispatch = useAppDispatch();
   const character = useAppSelector(selectCharacter);
   useEffect(()=>{
-    dispatch(characterAsync(characterId));
+    characterId && dispatch(characterAsync(+characterId));
   },[]);
 
   return (
