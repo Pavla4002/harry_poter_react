@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const HeaderPanel = () => {
   const navigate = useNavigate();
   function handleClick (){
-    navigate('/')
+    navigate('/harry_poter_react')
   }
   return (
       <Header className={styles.header}>
