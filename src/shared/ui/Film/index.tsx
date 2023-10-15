@@ -12,7 +12,7 @@ interface CardFilmProps{
 const Film = ({film}:CardFilmProps) => {
   const navigate = useNavigate();
   const handleClick = ()=>{
-    const path = `/pages/film/${film.id}`;
+    const path = `/harry_poter_react/pages/film/${film.id}`;
     navigate(path);
   }
     return (

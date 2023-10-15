@@ -13,7 +13,7 @@ interface CharacterProps{
 const Character = ({character}:CharacterProps) => {
   const navigate = useNavigate();
   function clickMe (){
-    navigate(`/pages/character/${character.id}`)
+    navigate(`/harry_poter_react/pages/character/${character.id}`)
   }
   return (
     <Card
