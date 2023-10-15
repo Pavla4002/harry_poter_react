@@ -5,7 +5,7 @@
 }
 
 .content{
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -15,15 +15,24 @@
 .part1{
   @include vertical-position-el;
 }
+
 .part2{
   @include vertical-position-el;
-  width: 50%;
+  width:60%;
   height: 60vh;
   justify-content: space-between;
 }
 
-.smallPart1{
-  @include vertical-position-el;
-  height: 50px;
-  justify-content: space-between;
+.imgBox{
+  width: 350px;
+  height: 450px;
+  margin-bottom: 20px;
+}
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+span{
+  line-height: 30px;
 }

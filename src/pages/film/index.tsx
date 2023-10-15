@@ -32,6 +32,9 @@ const FilmPage = () => {
           <div className={styles.smallPart1}>
             <span>{film?.title_eng}</span>
           </div>
+          <div>
+            <MyButton onClick={handleClick}>Персонажи</MyButton>
+          </div>
         </div>
         <div className={styles.part2}>
           <span>Режиссер: {film?.director}</span>
@@ -42,9 +45,6 @@ const FilmPage = () => {
           <div className={styles.part1}>
             <span>Описание:</span>
             <span>{film?.description}</span>
-          </div>
-          <div>
-            <MyButton onClick={handleClick}>Персонажи</MyButton>
           </div>
         </div>
       </div>

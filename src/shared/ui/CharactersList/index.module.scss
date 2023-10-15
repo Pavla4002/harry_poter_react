@@ -1,0 +1,5 @@
+@import "src/app/style/index";
+
+.listCard{
+  @include list;
+}

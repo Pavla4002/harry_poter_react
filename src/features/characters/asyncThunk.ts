@@ -9,3 +9,11 @@ export const charactersAsync = createAsyncThunk(
     return data;
 }
 )
+
+export const characterAsync = createAsyncThunk(
+  'characters/getCharacter',
+  async (characterId : number)=>{
+      const data = await charactersAPI.getCharacter<ICharacters>(characterId);
+      return data;
+  }
+)

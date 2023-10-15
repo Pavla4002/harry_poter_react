@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { charactersAsync } from "src/features/characters/asyncThunk";
-import { filmsSlice } from "src/features/films/filmsSlice";
+import { characterAsync, charactersAsync } from "src/features/characters/asyncThunk";
 
 
 export const charactersSlice = createSlice({
   name: 'characters',
   initialState:{
-    characters:[]
+    characters:[],
+    character: null,
   },
   reducers:{
 
@@ -15,6 +15,9 @@ export const charactersSlice = createSlice({
     builder
       .addCase(charactersAsync.fulfilled,(state,action)=>{
         state.characters = action.payload
+      })
+      .addCase(characterAsync.fulfilled,(state,action)=>{
+        state.character = action.payload
       })
 }
 })

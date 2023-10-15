@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { selectCharacters } from "src/features/characters/selector";
 import { charactersAsync } from "src/features/characters/asyncThunk";
 import Character from "src/shared/ui/Character";
+import styles from './index.module.scss';
 
 const CharactersList = () => {
   const dispatch = useAppDispatch();
@@ -11,8 +12,8 @@ const CharactersList = () => {
     dispatch(charactersAsync());
   },[])
   return (
-    <div>
-      {characters.map(character=> <Character character={character}/>)}
+    <div className={styles.listCard}>
+      {characters.map(character=> <Character key={character.id} character={character}/>)}
     </div>
   );
 };
