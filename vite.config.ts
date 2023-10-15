@@ -12,6 +12,7 @@ export default defineConfig({
     outDir: "build",
     sourcemap: true,
   },
+  base:'/harry_poter_react/',
   test: {
     globals: true,
     environment: "jsdom",

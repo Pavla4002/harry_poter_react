@@ -7,7 +7,7 @@ import CharacterPage from "src/pages/character";
 
 const publicRouter= createBrowserRouter([
   {
-    path:'/harry_poter_react/',
+    path:'/harry_poter_react',
     element: <MainPage/>,
     children:[
       {
@@ -15,15 +15,15 @@ const publicRouter= createBrowserRouter([
         element: <FilmsPage/>,
       },
       {
-        path:'/pages/film/:filmId',
+        path:'pages/film/:filmId',
         element:<FilmPage/>,
       },
       {
-        path:'/pages/characters',
+        path:'pages/characters',
         element:<CharactersPage/>,
       },
       {
-        path:'/pages/character/:characterId',
+        path:'pages/character/:characterId',
         element:<CharacterPage/>,
       }
     ]
